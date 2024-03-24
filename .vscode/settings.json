@@ -1,0 +1,5 @@
+{
+    "javascript.referencesCodeLens.enabled": false,
+    "dotnet.codeLens.enableReferencesCodeLens": true,
+    "editor.codeLens": false
+}
