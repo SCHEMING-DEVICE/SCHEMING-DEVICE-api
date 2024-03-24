@@ -1,0 +1,6 @@
+@SCHEMING_DEVICE.Api_HostAddress = http://localhost:5079
+
+GET {{SCHEMING_DEVICE.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
