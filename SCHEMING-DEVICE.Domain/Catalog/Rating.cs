@@ -2,6 +2,8 @@ namespace Scheming.Device.Domain.Catalog
 {
     public class Rating
     {
+        public int Id { get; set;}
+        public int Star { get; set;}
         public int Stars { get; private set; }
         public string UserName { get; private set; }
         public string Review { get; set; }

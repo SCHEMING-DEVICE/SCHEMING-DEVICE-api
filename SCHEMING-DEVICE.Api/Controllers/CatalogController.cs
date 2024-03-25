@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Scheming.Device.Domain.Catalog;
+using SCHEMING_DEVICE.Data;
 
 namespace Scheming.Device.Api.Controllers
 {
@@ -9,15 +10,16 @@ namespace Scheming.Device.Api.Controllers
     [Route("[controller]")]
     public class CatalogController : ControllerBase
     {
+        private readonly StoreContext _db;
+        public CatalogController(StoreContext db)
+        {
+            _db = db;
+        }
         [HttpGet]
         public IActionResult GetItems()
         {
-            var items = new List<Item>()
-            {
-                new Item("Shirt", "Ohio State shirt.", "Nike", 29.99m),
-                new Item("Shorts", "Ohio State shirt.", "Nike", 49.99m)
-            };
-            return Ok(items);
+           
+            return Ok(_db.Items);
         }
 
         [HttpGet("{id:int}")]
