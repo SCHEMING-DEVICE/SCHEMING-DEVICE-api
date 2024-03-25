@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using SCHEMING_DEVICE.Data;
+using Scheming.Device.Data;
 
 namespace Scheming.Device.Data;
 
