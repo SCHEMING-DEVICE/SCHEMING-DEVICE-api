@@ -25,13 +25,12 @@ namespace Scheming.Device.Api.Controllers
         [HttpGet("{id:int}")]
         public IActionResult GetItem(int id)
         {
-            // Simulating getting an item by id from some data source.
-            var item = new Item("Shirt", "Ohio State shirt.", "Nike", 29.99m)
-            {
-                Id = id  // Setting the ID to the one passed in.
-            };
-            
-            return Ok(item);
+           var item = _db.Items.Find(id);
+           if (item == null)
+           {
+                return NotFound();
+           }
+            return Ok();
         }
 
         [HttpPost]
