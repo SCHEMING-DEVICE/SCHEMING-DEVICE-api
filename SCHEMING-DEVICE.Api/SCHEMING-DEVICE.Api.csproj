@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SCHEMING-DEVICE.Domain\SCHEMING-DEVICE.Domain.csproj" />
+    <ProjectReference Include="..\SCHEMING-DEVICE.Data\SCHEMING-DEVICE.Data.csproj" />
   </ItemGroup>
 
 </Project>
