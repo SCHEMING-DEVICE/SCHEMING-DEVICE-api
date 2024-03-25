@@ -12,5 +12,5 @@ public class StoreContextFactory : IDesignTimeDbContextFactory<StoreContext>
         optionsBuilder.UseSqlite("Data Sources=../Registrar.sqlite");
 
         return new StoreContext(OptionsBuilder.Options);
-    )
+    ) 
 }
