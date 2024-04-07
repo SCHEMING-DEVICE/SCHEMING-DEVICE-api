@@ -1,3 +1,4 @@
+
 ﻿using Microsoft.EntityFrameworkCore;
 using Scheming.Device.Data;
 using Scheming.Device.Domain.Catalog;
@@ -14,6 +15,7 @@ namespace SCHEMING_DEVICE.Data
 
         public DbSet<Item> Items { get; set;}
 
+
         public DbSet<Order> Orders { get; set;}
         
         protected override void OnModelCreating(ModelBuilder builder)
@@ -22,5 +24,6 @@ namespace SCHEMING_DEVICE.Data
             DbInitializer.Initialize(builder);
         
     }
+
 }
 }
